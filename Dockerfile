@@ -32,7 +32,9 @@ RUN docker-php-ext-install \
   dom \
   wddx \
   xsl \
-  mysql
+  mysql \
+  dom \
+  opcache
 
 RUN a2enmod rewrite
 
