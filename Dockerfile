@@ -39,3 +39,4 @@ RUN docker-php-ext-install \
 RUN a2enmod rewrite
 
 COPY conf/php.ini /usr/local/etc/php/
+RUN chown -R root:staff /usr/local/etc/php/php.ini
