@@ -12,7 +12,9 @@ RUN apt-get update \
     libmcrypt-dev \
     libpng-dev \
     libxslt1-dev \
-    ssmtp && \
+    ssmtp \
+    openssh-client \
+    rsync && \
     apt-get clean
 
 RUN docker-php-ext-configure \
