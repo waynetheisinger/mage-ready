@@ -6,6 +6,7 @@ ADD ioncube/ioncube_loader_lin_5.6.so /app/ioncube/ioncube_loader_lin_5.6.so
 RUN apt-get update \
   && apt-get install -y \
     cron \
+    nano \
     libfreetype6-dev \
     libicu-dev \
     libjpeg62-turbo-dev \
