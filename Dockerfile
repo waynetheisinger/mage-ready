@@ -38,6 +38,7 @@ RUN docker-php-ext-install \
 
 RUN a2enmod rewrite
 RUN a2enmod headers
+RUN a2enmod http2 
 
 COPY conf/php.ini /usr/local/etc/php/
 RUN chown -R root:staff /usr/local/etc/php/php.ini
