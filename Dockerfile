@@ -34,6 +34,7 @@ RUN docker-php-ext-install \
   xsl \
   mysql \
   dom \
+  soap \
   opcache
 
 RUN pecl install -o -f redis \
