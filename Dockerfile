@@ -14,6 +14,7 @@ RUN apt-get update \
     libxslt1-dev \
     ssmtp \
     openssh-client \
+    unzip \
     rsync && \
     apt-get clean
 
