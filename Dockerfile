@@ -35,7 +35,8 @@ RUN docker-php-ext-install \
   mysql \
   dom \
   soap \
-  opcache
+  opcache \
+  intl
 
 RUN pecl install -o -f redis \
   &&  rm -rf /tmp/pear \
