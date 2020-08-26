@@ -1,9 +1,9 @@
-FROM php:7.1-apache
+FROM php:7.3-apache
 MAINTAINER Wayne Theisinger <wayne@intacart.co.uk>
 
     RUN a2enmod socache_shmcb ssl
 
-ADD ioncube/ioncube_loader_lin_5.6.so /app/ioncube/ioncube_loader_lin_5.6.so
+ADD ioncube/ioncube_loader_lin_7.3.so /app/ioncube/ioncube_loader_lin_7.3.so
 
 RUN apt-get update \
   && apt-get install -y \
@@ -11,10 +11,10 @@ RUN apt-get update \
     libfreetype6-dev \
     libicu-dev \
     libjpeg62-turbo-dev \
-    libmcrypt-dev \
     libpng-dev \
     libxslt1-dev \
     openssh-client \
+    libzip-dev \
     unzip \
     rsync && \
     apt-get clean
@@ -26,8 +26,8 @@ RUN docker-php-ext-install \
   gd \
   intl \
   mbstring \
-  mcrypt \
   pdo_mysql \
+  mysqli \
   zip \
   bcmath \
   xml \
